@@ -1,5 +1,6 @@
 % Document class
 \documentclass[fontsize=12pt, paper=a4, headinclude, twoside=false, parskip=half+, pagesize=auto, numbers=noenddot, plainheadsepline, open=right, toc=listof]{scrreprt}
+\usepackage[standardsections]{scrhack}
 
 % PDF compression
 \pdfminorversion=5
@@ -12,6 +13,7 @@
 \usepackage[utf8]{inputenc}              % UTF8-Encoding
 \usepackage{amsthm}
 \usepackage[bottom]{footmisc}
+\usepackage[acronym]{glossaries}
 
 % Font
 \usepackage{mathpazo}                    % Palatino for math
@@ -153,6 +155,11 @@
 % further commands
 \newcommand{\todo}[1]{\colorbox{red}{\textbf{TODO:} #1}}
 \newcommand{\degree}[1]{#1^{\circ}}
+
+% acronyms 
+\newacronym{vr}{VR}{Virtual Reality}
+\newacronym{hmd}{HMD}{Head-Mounted Display}
+\newacronym{ve}{VE}{Virtual Environments}
 
 % buw title page
 \makeatletter
