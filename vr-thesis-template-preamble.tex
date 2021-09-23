@@ -1,0 +1,210 @@
+% Document class
+\documentclass[fontsize=12pt, paper=a4, headinclude, twoside=false, parskip=half+, pagesize=auto, numbers=noenddot, plainheadsepline, open=right, toc=listof]{scrreprt}
+
+% PDF compression
+\pdfminorversion=5
+\pdfobjcompresslevel=1
+
+% General
+\usepackage[automark]{scrlayer-scrpage}          % Header and Footer
+\usepackage{amsmath, marvosym}           % Math libraries
+\usepackage[utf8]{inputenc}              % UTF8-Encoding
+\usepackage{amsthm}
+\usepackage[bottom]{footmisc}
+
+% Font
+\usepackage{mathpazo}                    % Palatino for math
+\usepackage{setspace}                    % Line space
+\onehalfspacing                          % Line space 1.5
+\setkomafont{chapter}{\Huge\rmfamily}    
+\setkomafont{section}{\Large\rmfamily}
+\setkomafont{subsection}{\large\rmfamily}
+\setkomafont{subsubsection}{\large\rmfamily}
+\setkomafont{chapterentry}{\large\rmfamily}
+\setkomafont{descriptionlabel}{\bfseries\rmfamily}
+\setkomafont{captionlabel}{\small\bfseries}
+\setkomafont{caption}{\small}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+
+% Language: English
+\usepackage[british]{babel}
+
+% PDF-Output
+\usepackage[british, colorlinks=false, linkcolor=black]{hyperref}
+\usepackage[final]{microtype}
+\usepackage{url}
+\usepackage{pdflscape}
+
+% Tables
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{varwidth}
+\usepackage{verbatimbox}
+
+% Images
+\usepackage{graphicx}
+\usepackage{color}
+\graphicspath{{images/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{subfigure}
+\newcommand{\subfigureautorefname}{\figurename}
+\usepackage[all]{hypcap}
+\setcapindent{0em}
+\setcapwidth[c]{0.9\textwidth}
+\setlength{\abovecaptionskip}{0.2cm}
+
+% Source code
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\scriptsize\ttfamily,        % size of fonts used for the code
+  breaklines=tduringrue,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  frame=single
+}
+
+% Quotes
+\usepackage{epigraph}
+\setlength\epigraphwidth{10cm}
+\setlength\epigraphrule{0pt}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
+% Title style
+\usepackage{titlesec, blindtext}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{$\vert$}\hsp}{0pt}{\Huge\bfseries}
+
+% Title spacing
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+
+% left-aligned footnotes
+\deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark}}
+
+\typearea{14}
+\makeatletter
+\newcommand{\saved@equation}{}
+\let\saved@equation\equation
+\def\equation{\@hyper@itemfalse\saved@equation}
+\makeatother
+
+% cites with text in them
+\makeatletter
+\let\cite\relax
+\DeclareRobustCommand{\cite}{%
+  \let\new@cite@pre\@gobble
+  \@ifnextchar[\new@cite{\@citex[]}}
+\def\new@cite[#1]{\@ifnextchar[{\new@citea{#1}}{\@citex[#1]}}
+\def\new@citea#1{\def\new@cite@pre{#1}\@citex}
+\def\@cite#1#2{[{\new@cite@pre\space#1\if\relax\detokenize{#2}\relax\else, #2\fi}]}
+\makeatother
+
+% Hypothesis Counters
+% Parameters of newtheoremstyle: ABOVESPACE, BELOWSPACE, BODYFONT, INDENT, HEADFONT, HEADPUNCT, HEADSPACE, CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{hypothesisstyle}  
+  {\topsep}
+  {0}
+  {\normalfont}
+  {0pt}
+  {\bfseries}
+  {:}
+  {5pt plus 1pt minus 1pt}
+  {\thmname{#1}\textsubscript{\thmnumber{#2}}}
+
+\newtheoremstyle{shypothesisstyle}
+  {\topsep}
+  {0}
+  {\small}
+  {5pt}
+  {\itshape\bfseries}
+  {:}
+  {5pt plus 1pt minus 1pt}
+  {\thmname{#1}\textsubscript{\thmnumber{#2}}}
+
+\theoremstyle{hypothesisstyle}
+\newtheorem{hypothesis}{H}[]
+\theoremstyle{shypothesisstyle}
+\newtheorem{shypothesis}{H}[hypothesis]
+\renewcommand*{\theshypothesis}{\arabic{hypothesis}\alph{shypothesis}}
+\usepackage{cleveref}
+\crefformat{hypothesis}{\textbf{H\textsubscript{#1}}}
+\crefformat{shypothesis}{\textbf{\textit{H\textsubscript{#1}}}}
+\newcommand{\hypref}[1]{\hyperref[#1]{\cref{#1}}}
+
+% further commands
+\newcommand{\todo}[1]{\colorbox{red}{\textbf{TODO:} #1}}
+\newcommand{\degree}[1]{#1^{\circ}}
+
+% buw title page
+\makeatletter
+\newcommand*{\studyprogramme}[1]{\def\@studyprogramme{#1}}
+\newcommand*{\matnr}[1]{\def\@matnr{#1}}
+\newcommand*{\birthdate}[1]{\def\@birthdate{#1}}
+\newcommand*{\birthplace}[1]{\def\@birthplace{#1}}
+\newcommand*{\firstref}[1]{\def\@firstref{#1}}
+\newcommand*{\secondref}[1]{\def\@secondref{#1}}
+\newcommand*{\submissiondate}[1]{\def\@submissiondate{#1}}
+
+\def\maketitle
+{%
+\clearscrheadings
+\clearscrplain
+
+Bauhaus-Universität Weimar \\
+Faculty of Media \\
+Degree Programme \@studyprogramme
+
+\vspace{30mm}
+
+\begin{center}
+
+\begin{huge}
+\@title
+\end{huge}\\ \vspace{0.25cm}
+\begin{LARGE}
+\@subtitle
+\end{LARGE}
+
+
+\vspace{13mm}
+\begin{Large}
+Master's Thesis
+\end{Large}
+\end{center}
+
+\vspace{25mm}
+
+\@author \hfill Matriculation number: \@matnr \\
+born on \@birthdate{} in \@birthplace
+
+\vspace{3.5cm}
+
+\begin{tabular}{@{}ll}
+{\textbf{First referee:}} & \@firstref \\
+{\textbf{Second referee:}} & \@secondref \\
+\end{tabular}
+
+\vspace{1cm}
+Submission date: \@submissiondate
+
+\clearpage
+}
+\makeatother

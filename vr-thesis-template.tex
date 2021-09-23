@@ -1,0 +1,152 @@
+%%%%%%%
+% vr-thesis-template.tex
+%%%%%%%
+
+% Import preamble settings
+\input{vr-thesis-template-preamble.tex} 
+
+\begin{document}
+
+% Roman numbering in the beginning
+\pagenumbering{Roman}
+\pagestyle{empty}
+
+
+%%%%%%%
+% Title page (appearance defined in preamble)
+%%%%%%%
+
+\studyprogramme{Human-Computer Interaction}
+\title{Jumping for Guided Navigation in Immersive Virtual Environments}
+%\subtitle{Optional Subtitle of the Thesis}
+\author{Ramsha Saad Thaniana}
+\matnr{121766}
+\birthdate{07\textsuperscript{th} October 1996}
+\birthplace{Karachi, Pakistan}
+\firstref{Prof. Dr. Bernd Fröhlich}
+\secondref{Jun.-Prof. Dr. Jan Ehlers}
+\submissiondate{08\textsuperscript{th} November 2021}
+
+\maketitle
+
+% Normal headers and footers for the remainder
+\pagestyle{useheadings}
+
+%%%%%%%
+% Declaration of Authorship
+%%%%%%%
+
+\chapter*{Declaration of Authorship}
+\input{text-source/declaration-of-authorship.tex}
+
+
+%%%%%%%
+% Abstract
+%%%%%%%
+
+\chapter*{Abstract}
+\input{text-source/abstract.tex}
+
+%%%%%%%
+% Table of contents
+%%%%%%%
+
+\tableofcontents
+
+%%%%%%%
+% Main content
+%%%%%%%
+
+%%%%%%%
+% Introduction
+%%%%%%%
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\input{text-source/introduction.tex}
+
+%%%%%%%
+% Related Work
+%%%%%%%
+
+\chapter{Related Work}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Guided Navigation Scenarios}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Automated Jumping for Guided Navigation}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Comprehensibilty of Automated Jumps}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Design of the User Study}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Procedure of the User Study}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Guided Jumping Scenarios
+%%%%%%%
+
+\chapter{Evaluation of the User Study}
+\pagenumbering{arabic}
+\input{text-source/related-work.tex}
+
+%%%%%%%
+% Conclusion and Future Work
+%%%%%%%
+
+\chapter{Conclusion and Future Work}
+\input{text-source/conclusion.tex}
+
+
+
+
+%%%%%%%
+% Biblography
+%%%%%%%
+
+{\footnotesize
+\bibliography{vr-thesis-template}{}
+\bibliographystyle{ieeetr}
+}
+
+%%%%%%%
+% Appendix
+%%%%%%%
+
+\appendix
+\chapter{Appendix}
+\input{text-source/appendix.tex}
+
+
+\end{document}
