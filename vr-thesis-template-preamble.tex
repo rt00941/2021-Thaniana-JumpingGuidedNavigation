@@ -152,6 +152,40 @@
 \crefformat{shypothesis}{\textbf{\textit{H\textsubscript{#1}}}}
 \newcommand{\hypref}[1]{\hyperref[#1]{\cref{#1}}}
 
+% Research Question Counters
+% Parameters of newtheoremstyle: ABOVESPACE, BELOWSPACE, BODYFONT, INDENT, HEADFONT, HEADPUNCT, HEADSPACE, CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{rqstyle}  
+{\topsep}
+{0}
+{\normalfont}
+{0pt}
+{\bfseries}
+{:}
+{5pt plus 1pt minus 1pt}
+{\thmname{#1}\textsubscript{\thmnumber{#2}}}
+
+\newtheoremstyle{srqstyle}
+{\topsep}
+{0}
+{\small}
+{5pt}
+{\itshape\bfseries}
+{:}
+{5pt plus 1pt minus 1pt}
+{\thmname{#1}\textsubscript{\thmnumber{#2}}}
+
+\theoremstyle{rqstyle}
+\newtheorem{researchq}{RQ}[]
+\theoremstyle{srqstyle}
+\newtheorem{sresearchq}{RQ}[researchq]
+\renewcommand*{\thesresearchq}{\arabic{researchq}\alph{sresearchq}}
+\usepackage{cleveref}
+\crefformat{researchq}{\textbf{RQ\textsubscript{#1}}}
+\crefformat{sresearchq}{\textbf{\textit{RQ\textsubscript{#1}}}}
+\newcommand{\researchqref}[1]{\hyperref[#1]{\cref{#1}}}
+
+
 % further commands
 \newcommand{\todo}[1]{\colorbox{red}{\textbf{TODO:} #1}}
 \newcommand{\degree}[1]{#1^{\circ}}
