@@ -1,11 +1,11 @@
-\label{chapter:Related Work}
+\label{Chapter:Related Work}
 %This is related work with an example citation~\cite{Galyean1995}...
-As mentioned in Chapter \ref{chapter:Introduction}, this thesis aims to investigate a technique for automated guided navigation using the jumping metaphor. To understand where the concept for this technique comes from we will take a look at different navigation metaphors for \acrshort{hmd}s and see what the advantages of jumping navigation are. We will then see what the purpose of guiding in \acrshort{ve}s is and why it can be useful for navigation to be guided. Based on this we will then show the motivation for bringing together jumping and guiding into one navigation technique. 
+As mentioned in Chapter \ref{Chapter:Introduction}, this thesis aims to investigate a technique for automated guided navigation using the jumping metaphor. To understand where the concept for this technique comes from we will take a look at different navigation metaphors for \acrshort{hmd}s and see what the advantages of jumping navigation are. We will then see what the purpose of guiding in \acrshort{ve}s is and why it can be useful for navigation to be guided. Based on this we will then show the motivation for bringing together jumping and guiding into one navigation technique. 
 
 \section{Navigation}
 \label{section:RW Navigation}
 
-Navigation is the task of moving around and when it comes to \acrfull{3d} environments it is one of the most common actions that is carried out by users. According to Bowmanm, Kruijff et al.. navigation \textit{"presents challenges such as supporting spatial awareness, providing efficient and comfortable movement between distant locations, and making navigation lightweight so that users can focus on more-important tasks"}. Navigation can be divided into the motor and cognitive components, travel and way finding respectively. Navigation tasks include exploration, search and maneuvering\cite{Bowman2001}. Our technique will focus on 
+Navigation is the task of moving around and when it comes to \acrfull{3d} environments it is one of the most common actions that is carried out by users. According to Bowmanm, Kruijff et al.. navigation \textit{'presents challenges such as supporting spatial awareness, providing efficient and comfortable movement between distant locations, and making navigation lightweight so that users can focus on more-important tasks'}. Navigation can be divided into the motor and cognitive components, travel and way finding respectively. Navigation tasks include exploration, search and maneuvering~\cite{Bowman2001}. Our technique will focus on 
 \begin{itemize}
 	\item Exploration: Navigation with no explicit target for the purpose of investigating the environment.
 	\item Search: Navigation with the intention of going to a target which is known or finding one which is not known.
@@ -25,7 +25,7 @@ Quality factors of a technique are what make it effective. Some of the quality f
 	\item Information Gathering (the user’s ability to actively
 	obtain information from the environment during travel).
 	\item Presence (the user’s sense of immersion or “being
-	within” the environment)\cite{Bowman1997}.
+	within” the environment)~\cite{Bowman1997}.
 	
 	In addition to the above there is also a final quality factor:
 	\item Feeling Well (Avoiding motion sickness).
@@ -33,27 +33,24 @@ Quality factors of a technique are what make it effective. Some of the quality f
 
 \subsection{Travel Metaphors}
 \label{subsection RW Navigation: Travel Metaphors}
-Travel metaphors can be divided into many categories such as physical movement, viewpoint manipulation, steering, target based and route planning \cite{Bowman2001}. These different metaphors consider the quality factors as mentioned in Section \ref{subsection RW Navigation:Quality Factors} to different extents depending on the goal of navigation. When the goal is not travel itself but some other task for which navigation is required, the technique must be more simplistic so as to not take away focus from the task. Hence, two very common metaphors of travel used in such cases are steering and teleportation, which is a form of target based travel.
+Travel metaphors can be divided into many categories such as physical movement, viewpoint manipulation, steering, target based and route planning~\cite{Bowman2001}. These different metaphors consider the quality factors as mentioned in Section \ref{subsection RW Navigation:Quality Factors} to different extents depending on the goal of navigation. When the goal is not travel itself but some other task for which navigation is required, the technique must be more simplistic so as to not take away focus from the task. Hence, two very common metaphors of travel used in such cases are steering and teleportation, which is a form of target based travel.
 
 Steering navigation is continuous movement of the users viewpoint in a specific direction that is controlled by gaze, pointing or a physical device. Velocity may also be varied as an additional action. When steering, as the user is moving continuously through the environment they can see around them and hence, have a good spatial awareness. However, the movement may cause motion sickness as they are physically standing still while their surroundings are moving.
 
 Teleportation, which is also a technique where users are physically standing still, tries to reduce motion sickness by moving directly to a target instead of continuously traveling through the surroundings. However, due to this discrete movement users may miss out on parts of the environment as they go directly to another position and orientation they were in. Therefore, when using teleportation users would have less spatial awareness than if they were steering.
 
-Weissker et al. try to reconcile steering and teleportation metaphors to minimize motion sickness while still getting a similar spatial awareness (or spatial updating) compared to steering, through the jumping metaphor. This is a short-range teleportation technique because it is target based travel to visible parts of the scene. Findings by Weissker et al. were that this technique resulted in \textit{"significantly faster travel times"} as compared to steering but \textit{"similar spatial updating accuracies in both conditions"} for $75\%$ of the participants. It also \textit{"induced significantly less	simulator sickness"}. Therefore, the technique can be used in most cases as an alternative for steering, however, there may be some individuals that would have their ability for spatial updating impaired\cite{Weissker2018}.
+Weissker et al. try to reconcile steering and teleportation metaphors to minimize motion sickness while still getting a similar spatial awareness (or spatial updating) compared to steering, through the jumping metaphor. This is a short-range teleportation technique because it is target based travel to visible parts of the scene. Findings by Weissker et al. were that this technique resulted in \textit{'significantly faster travel times'} as compared to steering but \textit{'similar spatial updating accuracies in both conditions'} for $75\%$ of the participants. It also \textit{'induced significantly less	simulator sickness'}. Therefore, the technique can be used in most cases as an alternative for steering, however, there may be some individuals that would have their ability for spatial updating impaired~\cite{Weissker2018}.
 
-In addition to travel metaphors, navigation techniques can also have different levels of 
-user controlled versus automatic navigation
+Navigation techniques using any of these travel metaphors can also have different levels of user control ranging from completely user controlled to fully automatic navigation depending on the use cases.
 
+\section{Guiding for Navigation}
+\label{section:RW Guiding for Navigation}
+Guiding means to help someone find a target object or location. When speaking of guiding through an environment it would mean showing someone the recommended path through the environment to give them the best experience of it. This would still apply for a \acrshort{ve} but requires additional considerations that come with doing anything in \acrfull{vr}. Guiding can be done for any \acrshort{vr} tasks, whether it is navigation, selection, manipulation. However, here we will talk about guiding for navigation in \acrshort{vr}.
 
-\section{Guiding}
-\label{section:RW Guiding}
-guiding in vr definition
-motivations for guiding
-guiding examples
-river analogy, exploration assistance etc
-guiding for navigation
-user controlled versus automatic guiding
+Guided navigation techniques are motivated by the wish to \textit{'balance the notion of interaction with guidance (telling)'} and to provide a narrative structure to the experience. Galyean presented the River Analogy which is an automatic steering technique for guided navigation and guides \textit{'the user’s continuous and direct input within both space and time allowing a more narrative presentation'}. The technique was found to be useful when applied to a VR experience in a museum showing that there are cases where guided interaction for \acrshort{ve}s is useful~\cite{Galyean1995}.
+
+Another example of guided navigation presented by Freitag et al. uses more passive guiding and simply supplements a users free exploration of the \acrshort{ve}. It visualizes the paths a user can follow based on what has already been explored and shows the users what their final location would be if the follow it. A study of this technique showed that it leads to \textit{'improves the knowledge of the scene, leads to a more complete exploration, and is experienced as helpful and easy to use'}. In comparison, during free exploration users \textit{'miss important parts, leading to incorrect or incomplete environment knowledge and a potential negative impact on performance in later tasks.'}, thus showing why guiding could be important when complete environmental knowledge is essential or beneficial~\cite{Freitag2018}.
 
 \section{Conclusion}
 \label{section:RW Conclusion}
-combine navigation and guiding to get guided navigation using jumping. then we go to motivation
+Sections \ref{section:RW Navigation} and \ref{section:RW Guiding for Navigation} explored research navigation techniques and why guiding can be useful for interaction in \acrshort{vr}, particularly navigation. Based on this research we realized how useful a guiding technique using jumping would be and the considerations that need to be taken when designing such a technique. The motivations for this will be discussed further in Chapter \ref{Chapter:Guided Jumping Motivation} and the considerations when designing it will be further discussed in Chapter \ref{Chapter:Automated Guided Jumping for Navigation}.
