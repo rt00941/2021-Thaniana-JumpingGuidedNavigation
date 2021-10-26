@@ -7,18 +7,32 @@ Guiding facilitates exploration of \acrshort{3d} data where it is \textit{'arran
 \label{section:GJM Storytelling in VR}
 Storytelling, the art of sharing stories has existed in humanity for millennia. As society has developed so have the ways in which storytelling is accomplished. With the advent of a technological age this storytelling transformed onto screens. Now, in recent times there has been a further breakthrough in storytelling with the advances in \acrshort{vr} and the increase in ways of presenting immersive content. As Bucher explains the concept of \acrshort{vr} has existed long before the technology itself yet storytelling in \acrshort{vr} follows different rules from the traditional stories as the perspective of a story is different in an Immersive Environment~\cite{Bucher2017}.
 
-This makes it quite compelling to look into \acrshort{vr} techniques that could be used to support this crafting of immersive narratives. Quite a few techniques for designing better \acrshort{ve}s for storytelling are already exist but what is the best way of allowing users to move around in these \acrshort{ve}s? We need to ensure that a structure is provided instead of just allowing an \textit{emergent narrative}, which is a story that emerges as a \textit{'product of our interactions and goals as we navigate the experience'}. This is where guiding would come in to \textit{'balance the interaction (exploration) with an ability to guide the user, while at the same time maintaining a sense of pacing or flow through the experience'}~\cite{Galyean1995}.
+This makes it quite compelling to look into \acrshort{vr} techniques that could be used to support this crafting of immersive narratives. Quite a few techniques for designing better \acrshort{ve}s for storytelling already exist but the question arises about what the best way of allowing users to move around in these \acrshort{ve}s is. We need to ensure that a structure is provided instead of just allowing an \textit{emergent narrative}, which is a story that emerges as a \textit{'product of our interactions and goals as we navigate the experience'}. This is where guiding would come in to \textit{'balance the interaction (exploration) with an ability to guide the user, while at the same time maintaining a sense of pacing or flow through the experience'}~\cite{Galyean1995}.
 
-According to Rodriguez et, al. 
-
-
+According to Rodriguez et, al. \textit{'Providing effective \acrshort{3d} exploration	experiences is particularly relevant when the goal is to allow people to appreciate, understand and interact with intrinsically \acrshort{3d} virtual objects'}~\cite{Rodriguez2015}. This is a part of storytelling as the narrative structure within the environment may include interacting with \acrshort{3d} objects that are part of it. This is why we believe that storytelling could really benefit from an guided \acrshort{3d} exploration experience. To ensure that a narrative structure is maintained and that users do not end up influencing the narrative structure automatic guiding techniques would be the best, however, there can be ways to give users some choices as well if the experience has room for that. 
 
 \section{Virtual Tours}
 \label{section:GJM Virtual Tours}
+Similar to storytelling, tours have existed for a long time. People may need tours of any new place they visit or that they become a part of. For example, new students at a school may need a tour of it initially so that they know how to navigate it themselves later on. Tours are also a part of the tourism industry as tourists may take tours of a city they visit or just some important locations in the city. People may also want tours of specific locations such as museums to get more out of visiting those place than they would get if they explored it on their own as they do not have information that a tour guide guiding them through it would have. 
 
-\section{Research Questions}
-\label{section:GJM Research Questions}
+As we entered the age of technology we started getting virtual worlds that contain schools, cities, museums, other spaces that are either modeled exactly after some existing physical counterparts or are made from a creator's imagination. Either way this means that now there are virtual spaces just like physical ones that users could benefit from learning about through a tour. This raises the question of what the best way to tour these virtual spaces is. One option would be to have someone physically present where the user is using the \acrshort{vr} hardware and guide them verbally. If that is not an option there can be tour guide that could embodied as an avatar and be remotely a part of the \acrshort{ve}. Finally an algorithm driven agent could also be a virtual tour guide for users. We felt that this may be useful but wondered about alternatives where we do not want another person or agent in the environment. This made us think about techniques that provide visual guidance and then let the user move themselves following the guiding lines. An example of this is the technique by Freitag et al. that shows possible paths and the target location they would lead to~\cite{Freitag2018}. Besides visual guidance, guiding can also be done automatically such as the River Analogy which was applied to a virtual museum. This is useful when the author of an experience wants to ensure that their intentions of how the tour should be are followed rather than allowing users control on how they navigate~\cite{Galyean1995}.
 
+%\section{Research Questions}
+%\label{section:GJM Research Questions}
+
+\section{Conclusion}
+\label{section:GJM Conclusion}
+Based on the use cases presented in the sections \ref{section:GJM Storytelling in VR} and \ref{section:GJM Virtual Tours} along with the literature review that led us to believe that the navigation metaphor of jumping is preferable to steering in most cases, we came up with the following goals for the technique to be developed for this thesis:
+\begin{itemize}
+	\item Providing a narrative structure to the immersive environment.
+	\item Facilitating acquisition of complete knowledge of the environment.
+	\item Novice friendly interface.
+	\item Reducing motion sickness and disorientation.
+	\item Moving to currently visible part of scene at each point to maintain a visible route.
+	\item Balancing interaction with guiding in an immersive environment.
+	\item Avoiding obstacles, collisions, ghosting and being too close to objects or walls.
+\end{itemize}
+Considering these goals of the technique we thought that the following Research Questions were important to keep in mind when developing and evaluating it: 
 \begin{researchq}
 	\label{rq:rq1}
 	How can guided navigation techniques facilitate the acquisition of relevant knowledge of the scene while avoiding motion sickness?
@@ -32,5 +46,3 @@ According to Rodriguez et, al.
 	Will having guided jumping improve comfort and reduce task load compared to free jumping with visual guidance?
 \end{researchq}
 
-\section{Conclusion}
-\label{section:GJM Conclusion}
