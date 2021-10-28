@@ -1,5 +1,5 @@
 \label{Chapter:Automated Guided Jumping}
-In this chapter we will start by discussing the interaction design for an automated guided jumping navigation technique that would meet the research questions referenced in \ref{section:GJM Conclusion}. This will be followed by details about development of the technique which can be divided into three parts; the setup of an environment and narrative structure for using this technique, development of automated jumping and finally how to make the jumps comprehensible to users. 
+In this chapter we will start by discussing the interaction design for an automated guided jumping navigation technique that would meet the research questions referenced in section \ref{section:GJM Conclusion}. This will be followed by details about development of the technique which can be divided into two parts; the setup of an environment and narrative structure for using this technique and development of automated jumping in a way that jumps are comprehensible to users. 
 
 \section{Interaction Design}
 \label{section AGJ: Interaction Design}
@@ -15,7 +15,7 @@ A tour of the \acrshort{ve} would take place by ensuring that users go to specif
 
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/interaction-design-steps.png}
+	\includegraphics[width=0.5\textwidth]{images/interaction-design-steps.pdf}
 	\caption{Steps that would be followed in an exploration of a \acrshort{ve} using the automated guided jumping navigation technique.}
 	\label{fig:interaction-design-steps}
 \end{figure}
@@ -41,16 +41,34 @@ In addition to users having the option to pause, users should also have some con
 \section{Environment Setup}
 \label{section AGJ: Environment Setup}
 
-Once we came up with a suitable interaction design for the technique
+Once we came up with a suitable interaction design for the technique we had to decide how an environment would need to be set up to use this technique. Figure \ref{fig:interaction-design-layout} shows a basic environment in which our guided jumping technique can be used. As mentioned in subsection \ref{subsection AGJ ID: Exploration Steps}, a user has to travel from one node to the next. As nodes are points of interest and can be far apart from each other, to ensure short jumps there are way points between them. The figure \ref{fig:interaction-design-layout} shows these nodes as and way points as black and yellow spheres respectively. As we see in \ref{subsubsection AGJ ID ES: Choice between Nodes}, sometimes there can be more than one node to choose from as the next node. This is indicated in the figure through numbers and arrows.     
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/interaction-design-layout.png} %replace with picture of actual environment on unity with visible nodes
+	\includegraphics[width=0.5\textwidth]{images/interaction-design-layout.pdf} 
 	\caption{This is a potential setup of an environment in which the automated guided jumping navigation would be used. Black spheres = nodes, yellow spheres = way points, arrows and numbers where there is a choice between nodes}
 	\label{fig:interaction-design-layout}
 \end{figure}
+
+This environment setup with nodes, way points and choices is something that would be a part of the environment design by the creator of an experience or tour. The nodes have to be points of interest so should be placed where there is some exhibit or interesting object for users to look at. Nodes are numbered so that the next node can be linked to a node. Way points should also be setup between the nodes. Lastly, any nodes where there can be a choice between more than one next node is also set up accordingly.
+ 
 \section{Automated Jumping}
 \label{section AGJ: Automated Jumping}
-%\section{Gesture Control}
-%\label{section AGJ: Gesture Control}
-\section{Comprehensibility of Jumps}
-\label{section AGJ: Comprehensibility of Jumps}
+Once an environment is setup with nodes and way points automated jumping can be carried out by moving a user from each way point or node to the next while keeping in mind important aspects of teleportation techniques as specified by Weissker et al. These are \textit{'target specification, pre-travel information, transitions and post-travel feedback'}~\cite{Weissker2018} and are what make the jumps comprehensible.
+
+\subsection{Comprehensibility of Jumps}
+\label{subsection AGJ AJ: Comprehensibility of Jumps}
+The target specification in this case is automatic and has been preassigned as the next node or way point, except for when there is a choice between more than one way point or node as the next target. Pre-travel information is provided as avatars positioned at the target's location and facing the direction that a user would be oriented towards after a jump. In addition, the time left till the jump will take place is also indicated by a line that gets narrower as less time is left. This can be seen in figure \ref{fig:automated-jumping-feedback}. We decided to go with simple instant transitions for the jumps. There is no specific post-travel feedback, however, after a jump users can already see the pre-travel information for the next jump and are therefore aware that they have completed the current jump. 
+
+\begin{figure}[]
+	\centering
+	(\centering 1) {\includegraphics[width=0.25\textwidth]{images/automated-jumping-feedback-1.pdf}}
+	(\centering 2) {\includegraphics[width=0.25\textwidth]{images/automated-jumping-feedback-2.pdf}} 
+	\caption{Avatar at target position facing orientation the user will face after jump. The orange line can be seen to decrease in width between (1) and (2) indicating time left till jump}
+	\label{fig:automated-jumping-feedback}
+\end{figure}  
+
+Finally, there has to be feedback when the user pauses automated jumping or when the user has to make a choice.
+
+\subsection{Gesture Control}
+\label{subsection AGJ AJ: Gesture Control}
+Since we wanted to reduce the learning difficulty for users and also the hardware 
