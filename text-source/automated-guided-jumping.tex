@@ -32,7 +32,7 @@ Before a jump takes place, a user needs to know the following information:
 
 \subsubsection{Pause to Explore}
 \label{subsubsection AGJ ID ES: Pause to Explore}
-As the jumping is done automatically, it is important to provide the user with some way to control the technique. This can be done by allowing them to somehow pause the jumping either implicitly or explicitly so that they can take the time to explore or look around rather than being worried about automatically moving to the next position. Similarly, users would then also have the ability to implicitly or explicitly to resume once they are ready to continue.
+As the jumping is done automatically, it is important to provide the user with some way to control the technique. This can be done by allowing them to somehow pause the jumping either implicitly or explicitly so that they can take the time to explore or look around rather than being worried about automatically moving to the next position. Similarly, users would then also have the ability to implicitly or explicitly to resume once they are ready to continue. Resuming would reset the countdown to a jump so as to avoid sudden jumps after resuming. Looking away from the next node causes the guiding to be paused implicitly and looking back at it can cause the guiding to be resumed as looking around is a natural behavior that someone may use to explore an environment. For explicitly pausing and resuming some form of conscious user input to pause or resume the guiding is required instead.  
 
 \subsubsection{Choice between Nodes}
 \label{subsubsection AGJ ID ES: Choice between Nodes}
@@ -63,12 +63,29 @@ The target specification in this case is automatic and has been preassigned as t
 	\centering
 	(\centering 1) {\includegraphics[width=0.25\textwidth]{images/automated-jumping-feedback-1.pdf}}
 	(\centering 2) {\includegraphics[width=0.25\textwidth]{images/automated-jumping-feedback-2.pdf}} 
-	\caption{Avatar at target position facing orientation the user will face after jump. The orange line can be seen to decrease in width between (1) and (2) indicating time left till jump}
+	\caption{Avatar at target position facing orientation the user will face after jump. The orange line can be seen to decrease in width between (1) and (2) indicating time left till jump.}
 	\label{fig:automated-jumping-feedback}
 \end{figure}  
 
-Finally, there has to be feedback when the user pauses automated jumping or when the user has to make a choice.
+Finally, there has to be feedback  when the user has to make a choice or when they pause the automated jumping. This feedback is provided through \acrfull{ui}. To indicate a choice needs to be made by the user for what path they want to take, there is a combination of arrows and signs pointing to the avatars that indicate the next possible positions to choose from. On selection a sign that says \textit{'Selected!'}is used to show which option has been selected. In addition, the arrow and sign for the option that is not selected disappear. Once feedback has been given for making a choice, the guiding continues with the node or way point represented by the selected avatar as the next node or way point. To indicate that the automatic guiding is paused, a sign that says \textit{'Paused'} becomes visible. Figure \ref{fig:automated-jumping-feedback-ui} shows these different \acrshort{ui}s for feedback on pausing or making a choice. 
+
+\begin{figure}[]
+	\centering
+	(\centering 1) {\includegraphics[width=0.25\textwidth]{images/choose.pdf}}
+	(\centering 2) {\includegraphics[width=0.25\textwidth]{images/choice-made.pdf}}
+	(\centering 3) {\includegraphics[width=0.25\textwidth]{images/paused.pdf}} 
+	\caption{Feedback when making a choice or pausing: (1) Arrows and signs pointing to the different avatars indicating a choice. (2) The selected avatar is indicated by a sign while the arrow and sign for the avatar not selected disappear. (3) A sign showing that automated jumping has been paused.}
+	\label{fig:automated-jumping-feedback-ui}
+\end{figure} 
 
 \subsection{Gesture Control}
 \label{subsection AGJ AJ: Gesture Control}
-Since we wanted to reduce the learning difficulty for users and also the hardware 
+Since we wanted to reduce the learning difficulty for users and also the hardware that would be required to use the technique, we decided on allowing users to use hand gestures with a \acrshort{hmd} that allows for gesture tracking. Users can pause and resume the automated guiding explicitly through hand gestures. They can also use a pointing hand gesture to choose the next node or way point when there is a choice between more than one. These hand gestures should be natural and represent how a person may do a similar action in a non-virtual environment. Figure \ref{fig:automated-jumping-gestures} shows the hand gestures being used in our \acrshort{ve} using an Oculus Quest.
+\begin{figure}[]
+	\centering
+	(\centering 1) {\includegraphics[width=0.25\textwidth]{images/paused-gesture.pdf}}
+	(\centering 2) {\includegraphics[width=0.25\textwidth]{images/resume-gesture.pdf}}
+	(\centering 3) {\includegraphics[width=0.25\textwidth]{images/choice-gesture.pdf}} 
+	\caption{Gesture control to (1) pause, (2) resume and (3) make a choice.}
+	\label{fig:automated-jumping-gestures}
+\end{figure} 
