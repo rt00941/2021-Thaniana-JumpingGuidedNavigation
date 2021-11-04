@@ -14,6 +14,7 @@
 \usepackage{amsthm}
 \usepackage[bottom]{footmisc}
 \usepackage[acronym]{glossaries}
+\usepackage{pdfpages}
 
 % Font
 \usepackage{mathpazo}                    % Palatino for math
@@ -189,6 +190,11 @@
 % further commands
 \newcommand{\todo}[1]{\colorbox{red}{\textbf{TODO:} #1}}
 \newcommand{\degree}[1]{#1^{\circ}}
+
+\providepairofpagestyles{myThesis}{%
+	\clearpairofpagestyles
+	\cfoot*{\pagemark}
+}
 
 % acronyms 
 \newacronym{vr}{VR}{Virtual Reality}

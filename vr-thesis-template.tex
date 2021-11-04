@@ -28,15 +28,16 @@
 \submissiondate{08\textsuperscript{th} November 2021}
 
 \maketitle
-
 % Normal headers and footers for the remainder
-\pagestyle{useheadings}
+\pagestyle{myheadings}
+%\markright{\hfill \leftmark \hfill}
 
 %%%%%%%
 % Declaration of Authorship
 %%%%%%%
 
 \chapter*{Declaration of Authorship}
+\thispagestyle{myThesis}
 \input{text-source/declaration-of-authorship.tex}
 
 
@@ -45,6 +46,7 @@
 %%%%%%%
 
 \chapter*{Abstract}
+\thispagestyle{myThesis}
 \input{text-source/abstract.tex}
 
 %%%%%%%
@@ -52,6 +54,8 @@
 %%%%%%%
 
 \tableofcontents
+\markright{\hfill Contents \hfill}
+
 
 %%%%%%%
 % Main content
@@ -63,6 +67,8 @@
 
 \chapter{Introduction}
 \pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markboth{\hfill 1 Introduction \hfill}{\hfill 1 Introduction \hfill}
 \input{text-source/introduction.tex}
 
 %%%%%%%
@@ -70,7 +76,8 @@
 %%%%%%%
 
 \chapter{Related Work}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 2 Related Work \hfill}
 \input{text-source/related-work.tex}
 
 %%%%%%%
@@ -78,7 +85,8 @@
 %%%%%%%
 
 \chapter{Guided Jumping Motivation}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 3 Guided Jumping Motivation \hfill}
 \input{text-source/guided-jumping-motivation.tex}
 
 %%%%%%%
@@ -86,7 +94,8 @@
 %%%%%%%
 
 \chapter{Automated Guided Jumping}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 4 Automated Guided Jumping \hfill}
 \input{text-source/automated-guided-jumping.tex}
 
 %%%%%%%
@@ -94,7 +103,8 @@
 %%%%%%%
 
 \chapter{Design and Procedure of the User Study}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 5 Design and Procedure of User Study \hfill}
 \input{text-source/design-procedure.tex}
 
 %%%%%%%
@@ -102,7 +112,8 @@
 %%%%%%%
 
 \chapter{Evaluation of the User Study}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 6 Evaluation of User Study \hfill}
 \input{text-source/evaluation.tex}
 
 %%%%%%%
@@ -110,16 +121,20 @@
 %%%%%%%
 
 \chapter{Conclusion and Future Work}
-\pagenumbering{arabic}
+\thispagestyle{myThesis}
+\markright{\hfill 7 Conclusion and Future Work \hfill}
 \input{text-source/conclusion.tex}
+\markright{\hfill 7 Conclusion and Future Work \hfill}
 
 %%%%%%%
 % Biblography
 %%%%%%%
-
-{\footnotesize
+{
+\footnotesize
+\markright{\hfill Bibliography \hfill}
 \bibliography{vr-thesis-template}{}
 \bibliographystyle{ieeetr}
+\thispagestyle{myThesis}
 }
 
 %%%%%%%
@@ -128,6 +143,8 @@
 
 \appendix
 \chapter{Appendix}
+\thispagestyle{myThesis}
+\markright{\hfill A Appendix \hfill}
 \input{text-source/appendix.tex}
 
 
