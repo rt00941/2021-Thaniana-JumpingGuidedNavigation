@@ -148,7 +148,7 @@
 \theoremstyle{shypothesisstyle}
 \newtheorem{shypothesis}{H}[hypothesis]
 \renewcommand*{\theshypothesis}{\arabic{hypothesis}\alph{shypothesis}}
-\usepackage{cleveref}
+\usepackage[capitalise]{cleveref}
 \crefformat{hypothesis}{\textbf{H\textsubscript{#1}}}
 \crefformat{shypothesis}{\textbf{\textit{H\textsubscript{#1}}}}
 \newcommand{\hypref}[1]{\hyperref[#1]{\cref{#1}}}

@@ -1,9 +1,9 @@
 \label{Chapter:Automated Guided Jumping}
-In this chapter we will start by discussing the interaction design for an automated guided jumping navigation technique that would meet the research questions referenced in section \ref{section GJM: Conclusion}. This will be followed by details about development of the technique which can be divided into two parts; the setup of an environment and narrative structure for using this technique and development of automated jumping in a way that jumps are comprehensible to users. 
+In this chapter we will start by discussing the interaction design for an automated guided jumping navigation technique that would meet the research questions referenced in \cref{section GJM: Conclusion}. This will be followed by details about development of the technique which can be divided into two parts; the setup of an environment and narrative structure for using this technique and development of automated jumping in a way that jumps are comprehensible to users. 
 
 \section{Interaction Design}
 \label{section AGJ: Interaction Design}
-Looking at the use cases and motivation discussed in Chapter \ref{Chapter:Guided Jumping Motivation} we will first lay out a scenario in which our technique would be used and then go through the interaction design of the technique based on this scenario.
+Looking at the use cases and motivation discussed in \cref{Chapter:Guided Jumping Motivation} we will first lay out a scenario in which our technique would be used and then go through the interaction design of the technique based on this scenario.
 
 \subsection{Scenario}
 \label{subsection AGJ ID: Scenario}
@@ -11,7 +11,7 @@ We developed our automated guided jumping navigation technique  for a virtual to
 
 \subsection{Exploration Steps}
 \label{subsection AGJ ID: Exploration Steps}
-A tour of the \acrshort{ve} would take place by ensuring that users go to specified locations of interest or nodes. Since these could be quite far from each other there should be way points in between each node so that users would travel shorter distances to the nodes, hence, justifying the navigation being a jumping metaphor instead of teleportation. As shown in Figure \ref{fig:interaction-design-steps}, when a user is touring the environment they start at the first node. Here they can explore and wait for a while till they are willing to move on. When they are ready to jump they get some form of travel feedback so they are aware that a jump is about to take place. Then a jump takes place to either the next node or a way point. The user can no explore and wait or again jump to the next node or way point. The jumps would keep taking place until the final node is reached and the tour ends. 
+A tour of the \acrshort{ve} would take place by ensuring that users go to specified locations of interest or nodes. Since these could be quite far from each other there should be way-points in between each node so that users would travel shorter distances to the nodes, hence, justifying the navigation being a jumping metaphor instead of teleportation. As shown in \cref{fig:interaction-design-steps}, when a user is touring the environment they start at the first node. Here they can explore and wait for a while till they are willing to move on. When they are ready to jump they get some form of travel feedback so they are aware that a jump is about to take place. Then a jump takes place to either the next node or a way point. The user can now explore and wait or again jump to the next node or way point. The jumps would keep taking place until the final node is reached and the tour ends. 
 
 \begin{figure}[]
 	\centering
@@ -41,7 +41,7 @@ In addition to users having the option to pause, users should also have some con
 \section{Environment Setup}
 \label{section AGJ: Environment Setup}
 
-Once we came up with a suitable interaction design for the technique we had to decide how an environment would need to be set up to use this technique. Figure \ref{fig:interaction-design-layout} shows a basic environment in which our guided jumping technique can be used. As mentioned in subsection \ref{subsection AGJ ID: Exploration Steps}, a user has to travel from one node to the next. As nodes are points of interest and can be far apart from each other, to ensure short jumps there are way points between them. The figure \ref{fig:interaction-design-layout} shows these nodes as and way points as black and yellow spheres respectively. As we see in \ref{subsubsection AGJ ID ES: Choice between Nodes}, sometimes there can be more than one node to choose from as the next node. This is indicated in the figure through numbers and arrows.     
+Once we came up with a suitable interaction design for the technique we had to decide how an environment would need to be set up to use this technique. \cref{fig:interaction-design-layout} shows a basic environment in which our guided jumping technique can be used. As mentioned in \cref{subsection AGJ ID: Exploration Steps}, a user has to travel from one node to the next. As nodes are points of interest and can be far apart from each other, to ensure short jumps there are way points between them. The \cref{fig:interaction-design-layout} shows these nodes as and way-points as black and yellow spheres respectively. As we see in \cref{subsubsection AGJ ID ES: Choice between Nodes}, sometimes there can be more than one node to choose from as the next node. This is indicated in the figure through numbers and arrows.     
 \begin{figure}[]
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/interaction-design-layout.pdf} 
@@ -57,7 +57,7 @@ Once an environment is setup with nodes and way points automated jumping can be 
 
 \subsection{Comprehensibility of Jumps}
 \label{subsection AGJ AJ: Comprehensibility of Jumps}
-The target specification in this case is automatic and has been preassigned as the next node or way point, except for when there is a choice between more than one way point or node as the next target. Pre-travel information is provided as avatars positioned at the target's location and facing the direction that a user would be oriented towards after a jump. In addition, the time left till the jump will take place is also indicated by a line that gets narrower as less time is left. This can be seen in figure \ref{fig:automated-jumping-feedback}. We decided to go with simple instant transitions for the jumps. There is no specific post-travel feedback, however, after a jump users can already see the pre-travel information for the next jump and are therefore aware that they have completed the current jump. 
+The target specification in this case is automatic and has been preassigned as the next node or way point, except for when there is a choice between more than one way point or node as the next target. Pre-travel information is provided as avatars positioned at the target's location and facing the direction that a user would be oriented towards after a jump. In addition, the time left till the jump will take place is also indicated by a line that gets narrower as less time is left. This can be seen in \cref{fig:automated-jumping-feedback}. We decided to go with simple instant transitions for the jumps. There is no specific post-travel feedback, however, after a jump users can already see the pre-travel information for the next jump and are therefore aware that they have completed the current jump. 
 
 \begin{figure}[]
 	\centering
@@ -67,7 +67,7 @@ The target specification in this case is automatic and has been preassigned as t
 	\label{fig:automated-jumping-feedback}
 \end{figure}  
 
-Finally, there has to be feedback  when the user has to make a choice or when they pause the automated jumping. This feedback is provided through \acrfull{ui}. To indicate a choice needs to be made by the user for what path they want to take, there is a combination of arrows and signs pointing to the avatars that indicate the next possible positions to choose from. On selection a sign that says \textit{'Selected!'}is used to show which option has been selected. In addition, the arrow and sign for the option that is not selected disappear. Once feedback has been given for making a choice, the guiding continues with the node or way point represented by the selected avatar as the next node or way point. To indicate that the automatic guiding is paused, a sign that says \textit{'Paused'} becomes visible. Figure \ref{fig:automated-jumping-feedback-ui} shows these different \acrshort{ui}s for feedback on pausing or making a choice. 
+Finally, there has to be feedback  when the user has to make a choice or when they pause the automated jumping. This feedback is provided through \acrfull{ui}. To indicate a choice needs to be made by the user for what path they want to take, there is a combination of arrows and signs pointing to the avatars that indicate the next possible positions to choose from. On selection a sign that says \textit{'Selected!'}is used to show which option has been selected. In addition, the arrow and sign for the option that is not selected disappear. Once feedback has been given for making a choice, the guiding continues with the node or way point represented by the selected avatar as the next node or way point. To indicate that the automatic guiding is paused, a sign that says \textit{'Paused'} becomes visible. \cref{fig:automated-jumping-feedback-ui} shows these different \acrshort{ui}s for feedback on pausing or making a choice. 
 
 \begin{figure}[]
 	\centering
@@ -80,7 +80,7 @@ Finally, there has to be feedback  when the user has to make a choice or when th
 
 \subsection{Gesture Control}
 \label{subsection AGJ AJ: Gesture Control}
-Since we wanted to reduce the learning difficulty for users and also the hardware that would be required to use the technique, we decided on allowing users to use hand gestures with a \acrshort{hmd} that allows for gesture tracking. Users can pause and resume the automated guiding explicitly through hand gestures. They can also use a pointing hand gesture to choose the next node or way point when there is a choice between more than one. These hand gestures should be natural and represent how a person may do a similar action in a non-virtual environment. Figure \ref{fig:automated-jumping-gestures} shows the hand gestures being used in our \acrshort{ve} using an Oculus Quest.
+Since we wanted to reduce the learning difficulty for users and also the hardware that would be required to use the technique, we decided on allowing users to use hand gestures with a \acrshort{hmd} that allows for gesture tracking. Users can pause and resume the automated guiding explicitly through hand gestures. They can also use a pointing hand gesture to choose the next node or way point when there is a choice between more than one. These hand gestures should be natural and represent how a person may do a similar action in a non-virtual environment. \cref{fig:automated-jumping-gestures} shows the hand gestures being used in our \acrshort{ve} using an Oculus Quest 2.
 \begin{figure}[]
 	\centering
 	(\centering 1) {\includegraphics[width=0.25\textwidth]{images/paused-gesture.pdf}}
